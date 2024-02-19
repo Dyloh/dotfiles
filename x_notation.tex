@@ -1,0 +1,351 @@
+%%% version: 2024/2/19
+
+\newcommand\bindent{%
+  \begingroup
+  \setlength{\itemindent}{\myindent}
+  \addtolength{\algorithmicindent}{\myindent}
+}
+\newcommand\eindent{\endgroup}
+
+%%% typeface
+\newcommand{\ab}{\mathbf{a}}
+\newcommand{\bbb}{\mathbf{b}}
+\newcommand{\cbb}{\mathbf{c}}
+\newcommand{\db}{\mathbf{d}}
+\newcommand{\eb}{\mathbf{e}}
+\newcommand{\fb}{\mathbf{f}}
+\newcommand{\gb}{\mathbf{g}}
+\newcommand{\hb}{\mathbf{h}}
+\newcommand{\ib}{\mathbf{i}}
+\newcommand{\jb}{\mathbf{j}}
+\newcommand{\kb}{\mathbf{k}}
+\newcommand{\lb}{\mathbf{l}}
+\newcommand{\mb}{\mathbf{m}}
+\newcommand{\nbb}{\mathbf{n}}
+\newcommand{\ob}{\mathbf{o}}
+\newcommand{\pb}{\mathbf{p}}
+\newcommand{\qb}{\mathbf{q}}
+\newcommand{\rb}{\mathbf{r}}
+\newcommand{\sbb}{\mathbf{s}}
+\newcommand{\tb}{\mathbf{t}}
+\newcommand{\ub}{\mathbf{u}}
+\newcommand{\vbb}{\mathbf{v}}
+\newcommand{\wb}{\mathbf{w}}
+\newcommand{\xb}{\mathbf{x}}
+\newcommand{\yb}{\mathbf{y}}
+\newcommand{\zb}{\mathbf{z}}
+
+\newcommand{\lambdab}{\mathbf{\lambda}}
+\newcommand{\Lambdab}{\mathbf{\Lambda}}
+\newcommand{\thetab}{\bm{\theta}}
+\newcommand{\gammab}{\bm{\gamma}}
+
+% \newcommand{\ba}{\bm{a}}
+\newcommand{\bb}{\bm{b}}
+\newcommand{\bc}{\bm{c}}
+\newcommand{\bd}{\bm{d}}
+\newcommand{\be}{\bm{e}}
+\newcommand{\bbf}{\bm{f}}
+\newcommand{\bg}{\bm{g}}
+\newcommand{\bh}{\bm{h}}
+\newcommand{\bi}{\bmf{i}}
+\newcommand{\bj}{\bm{j}}
+\newcommand{\bk}{\bm{k}}
+% \newcommand{\bl}{\bm{l}}
+\newcommand{\bbm}{\bm{m}}
+\newcommand{\bn}{\bm{n}}
+\newcommand{\bo}{\bm{o}}
+\newcommand{\bp}{\bm{p}}
+\newcommand{\bq}{\bm{q}}
+% \newcommand{\br}{\bm{r}}
+\newcommand{\bs}{\bm{s}}
+\newcommand{\bt}{\bm{t}}
+\newcommand{\bu}{\bm{u}}
+\newcommand{\bv}{\bm{v}}
+\newcommand{\bw}{\bm{w}}
+\newcommand{\bx}{\bm{x}}
+\newcommand{\by}{\bm{y}}
+\newcommand{\bz}{\bm{z}}
+
+\global\long\def\mvar#1{\mathbf{#1}}%
+\global\long\def\ma{\mvar A}%
+\global\long\def\mb{\mvar B}%
+\global\long\def\mc{\mvar C}%
+\global\long\def\md{\mvar D}%
+ \global\long\def\mE{\mvar E}%
+\global\long\def\mf{\mvar F}%
+\global\long\def\mg{\mvar G}%
+\global\long\def\mh{\mvar H}%
+\global\long\def\iMatrix{\mvar I}%
+\newcommand{\mIdentity}{\mvar I}%
+\global\long\def\mj{\mvar J}%
+\global\long\def\mk{\mvar K}%
+\global\long\def\mm{\mvar M}%
+\global\long\def\mn{\mvar N}%
+\global\long\def\mO{\mvar O}%
+\global\long\def\mProj{\mvar P}%
+\global\long\def\mq{\mvar Q}%
+\global\long\def\mr{\mvar R}%
+\global\long\def\ms{\mvar S}%
+\global\long\def\mt{\mvar T}%
+\global\long\def\mU{\mvar U}%
+\global\long\def\mv{\mvar V}%
+\global\long\def\mx{\mvar X}%
+\global\long\def\my{\mvar Y}%
+\global\long\def\mz{\mvar Z}%
+\newcommand{\mSigma}{\mvar{\Sigma}}%
+\global\long\def\mLambda{\mvar{\Lambda}}%
+\global\long\def\mPhi{\mvar{\Phi}}%
+\global\long\def\mZero{\mvar 0}%
+\global\long\def\mDelta{\mvar{\Delta}}%
+
+\newcommand{\bA}{\bm{A}}
+\newcommand{\bB}{\bm{B}}
+\newcommand{\bC}{\bm{C}}
+\newcommand{\bD}{\bm{D}}
+\newcommand{\bE}{\bm{E}}
+\newcommand{\bF}{\bm{F}}
+\newcommand{\bG}{\bm{G}}
+\newcommand{\bH}{\bm{H}}
+\newcommand{\bI}{\bm{I}}
+\newcommand{\bJ}{\bm{J}}
+\newcommand{\bK}{\bm{K}}
+\newcommand{\bL}{\bm{L}}
+\newcommand{\bM}{\bm{M}}
+\newcommand{\bN}{\bm{N}}
+\newcommand{\bO}{\bm{O}}
+\newcommand{\bP}{\bm{P}}
+\newcommand{\bQ}{\bm{Q}}
+\newcommand{\bR}{\bm{R}}
+\newcommand{\bS}{\bm{S}}
+\newcommand{\bT}{\bm{T}}
+\newcommand{\bU}{\bm{U}}
+\newcommand{\bV}{\bm{V}}
+\newcommand{\bW}{\bm{W}}
+\newcommand{\bX}{\bm{X}}
+\newcommand{\bY}{\bm{Y}}
+\newcommand{\bZ}{\bm{Z}}
+
+\newcommand{\x}{{\mathbf{x}}}
+\newcommand{\y}{{\mathbf{y}}}
+\newcommand{\z}{{\mathbf{z}}}
+\newcommand{\w}{{\mathbf{w}}}
+%\newcommand{\p}{{\mathbf{p}}}
+\newcommand{\ba}{{\mathbf{a}}}
+
+\newcommand{\beps}{{\boldsymbol{\epsilon}}}
+\newcommand{\bepss}{{\boldsymbol{\epsilon}}^2}
+\newcommand{\bphi}{{\boldsymbol{\phi}}}
+\newcommand{\tmu}{{\tilde\mu}}
+\newcommand{\mulambda}[1]{\mu_{\lambda, #1}}
+\newcommand{\alambda}{a_\lambda}
+\newcommand{\tepsilon}{\tilde\epsilon}
+
+
+
+
+\newcommand{\argmin}{\mathop{\mathrm{argmin}}}
+
+\newcommand{\I}{{\mathbf{I}}}
+\newcommand{\A}{{\mathbf{A}}}
+\newcommand{\B}{{\mathbf{B}}}
+\newcommand{\U}{{\mathbf{U}}}
+\newcommand{\D}{{\mathbf{D}}}
+%\newcommand{\C}{{\mathbf{C}}}
+%\newcommand{\W}{{\mathbf{W}}}
+\newcommand{\bXi}{\boldsymbol\Xi}
+
+\newcommand{\bbeta}{\bm{\beta}}
+
+\newcommand{\N}{{\mathbb{N}}}
+%\newcommand{\R}{{\mathbb{R}}}
+%\newcommand{\E}{{\mathbb{E}}}
+\newcommand{\tlam}{\tilde{\lambda}}
+
+\newcommand{\tB}{{\tilde{\mathbf{B}}}}
+
+\newcommand{\tr}{\mathrm{tr}}
+
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\hntf}{\hat\nabla_\rho\tilde f_\delta}
+
+\newcommand{\effdim}{r}
+\newcommand{\efftrace}{\mathrm{ET}}
+
+
+
+
+
+\newcommand{\xyy}{\textcolor{cyan}}
+\global\long\def\TODO#1{{\color{red}TODO:\text{#1}}}%
+
+
+
+
+
+
+% Domains
+
+\global\long\def\R{\mathbb{R}}%
+\global\long\def\Rn{\mathbb{R}^{n}}%
+\global\long\def\Rm{\mathbb{R}^{m}}%
+\global\long\def\Rd{\mathbb{R}^{d}}% 
+\global\long\def\Rr{\mathbb{R}^{r}}% 
+\global\long\def\Rmn{\mathbb{R}^{m \times n}}%
+\global\long\def\Rnm{\mathbb{R}^{n \times m}}%
+\global\long\def\Rmm{\mathbb{R}^{m \times m}}%
+\global\long\def\Rnn{\mathbb{R}^{n \times n}}%
+
+\global\long\def\Z{\mathbb{Z}}%
+ 
+\global\long\def\Rp{\R_{> 0}}%
+ 
+
+\global\long\def\dom{\mathrm{dom}}%
+
+\global\long\def\dInterior{K}%
+
+\global\long\def\Rpm{\R_{> 0}^{m}}%
+
+% Norms
+
+\global\long\def\ellOne{\ell_{1}}%
+\global\long\def\ellTwo{\ell_{2}}%
+\global\long\def\ellInf{\ell_{\infty}}%
+\global\long\def\ellP{\ell_{p}}%
+
+\global\long\def\otilde{\widetilde{O}}%
+
+\global\long\def\argmax{\argmaxTex}%
+
+\global\long\def\argmin{\argminTex}%
+
+\global\long\def\sign{\signTex}%
+
+\global\long\def\rank{\rankTex}%
+
+\global\long\def\diag{\diagTex}%
+
+\global\long\def\im{\imTex}%
+
+\global\long\def\enspace{\quad}%
+
+ 
+
+% Symbol for definitions
+
+\global\long\def\defeq{\stackrel{\mathrm{{\scriptscriptstyle def}}}{=}}%
+
+\global\long\def\diag{\mathrm{diag}}%
+
+\global\long\def\mDiag{\mvar{Diag}}%
+ 
+\global\long\def\ceil#1{\left\lceil #1 \right\rceil }%
+
+\global\long\def\E{\mathbb{E}}%
+
+\global\long\def\jacobian{\mvar J}%
+ 
+
+\global\long\def\onesVec{1}%
+ 
+\global\long\def\indicVec#1{1_{#1}}%
+\global\long\def\cordVec#1{e_{#1}}%
+\global\long\def\op{\mathrm{spe}}%
+
+
+
+
+% Common Variables
+\global\long\def\oracle{\mathcal{O}}%
+ 
+\global\long\def\mw{\mvar W}%
+ 
+
+\global\long\def\runtime{\mathcal{T}}%
+ 
+
+% weights
+
+\global\long\def\idmap{\text{Id}}%
+ 
+
+\global\long\def\vLever{\sigma}%
+ 
+\global\long\def\mLever{\mSigma}%
+ 
+\global\long\def\mLapProj{\mvar{\Lambda}}%
+
+\global\long\def\penalizedObjective{f_{t}}%
+ 
+\global\long\def\penalizedObjectiveWeight{{\color{red}f}}%
+
+\global\long\def\fvWeight{\vg}%
+ 
+\global\long\def\fmWeight{\mg}%
+ 
+
+\global\long\def\vNewtonStep{\vh}%
+
+\global\long\def\norm#1{\|#1\|}%
+ 
+\newcommand{\normFull}[1]{\left\Vert#1\right\Vert}%
+ 
+\global\long\def\normA#1{\norm{#1}_{\ma}}%
+ 
+\global\long\def\normFullInf#1{\normFull{#1}_{\infty}}%
+
+\global\long\def\normFullSquare#1{\normFull{#1}_{\square}}%
+ 
+\global\long\def\normInf#1{\norm{#1}_{\infty}}%
+ 
+\global\long\def\normOne#1{\norm{#1}_{1}}%
+ 
+\global\long\def\normTwo#1{\norm{#1}_{2}}%
+ 
+\global\long\def\normLeverage#1{\norm{#1}_{\mSigma}}%
+ 
+\global\long\def\normWeight#1{\norm{#1}_{\fmWeight}}%
+
+\global\long\def\cWeightSize{c_{1}}%
+ 
+\global\long\def\cWeightStab{c_{\gamma}}%
+ 
+\global\long\def\cWeightCons{{\color{red}c_{\delta}}}%
+
+
+
+
+\global\long\def\vq{q}%
+\global\long\def\cnorm{\CNorm}%
+ 
+\global\long\def\code#1{\texttt{#1}}%
+
+\global\long\def\nnz{\mathrm{nnz}}%
+\global\long\def\tr{\mathrm{tr}}%
+\global\long\def\vones{\vec{1}}%
+
+\global\long\def\grad{\mathcal{\nabla}}%
+\global\long\def\hess{\nabla^{2}}%
+\global\long\def\hessian{\nabla^{2}}%
+
+\global\long\def\shurProd{\circ}%
+ 
+\global\long\def\shurSquared#1{{#1}^{(2)}}%
+\global\long\def\solver{\mathrm{\mathtt{S}}}
+\global\long\def\time{\mathrm{\mathcal{T}}}
+\global\long\def\trans{\top}%
+
+\global\long\def\lpweight{w_{p}}%
+\global\long\def\mlpweight{\mw_{p}}%
+\global\long\def\lqweight{w_{q}}%
+\global\long\def\mlqweight{\mw_{q}}%
+
+\newcommand{\bracket}[1]{[#1]}
+
+\newcommand{\tx}{\tilde{\mathbf{x}}}
+\newcommand{\bbv}{\mathbf{v}}
+\newcommand{\rtemp}{r_{\mathrm{temp}}}
+\newcommand{\ltemp}{\gamma_{\mathrm{temp}}}
+\newcommand{\tilder}{\tilde{r}}
+\newcommand{\elltemp}{l_{\mathrm{temp}}}
